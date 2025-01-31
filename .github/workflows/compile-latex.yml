@@ -15,17 +15,17 @@ jobs:
       - name: Compile Spanish Resume
         uses: xu-cheng/latex-action@v2
         with:
-          root_file: resume_espanol.tex
+          root_file: resume/resume_espanol.tex
 
       - name: Compile English Resume
         uses: xu-cheng/latex-action@v2
         with:
-          root_file: resume_english.tex
+          root_file: resume/resume_english.tex
 
       - name: Compile German Resume
         uses: xu-cheng/latex-action@v2
         with:
-          root_file: resume_deutsch.tex
+          root_file: resume/resume_deutsch.tex
 
       - name: Upload PDFs
         uses: actions/upload-artifact@v4
