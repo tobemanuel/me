@@ -28,7 +28,7 @@ jobs:
           root_file: resume_deutsch.tex
 
       - name: Upload PDFs
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: Compiled-Resumes
           path: |
