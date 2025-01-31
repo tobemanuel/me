@@ -1,4 +1,4 @@
-name: Compile LaTeX Document
+name: Compile LaTeX Resumes
 
 on: [push, pull_request]
 
@@ -9,13 +9,22 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
-      - name: Compile LaTeX
+      - name: Compile Spanish Resume
         uses: xu-cheng/latex-action@v2
         with:
-          root_file: cv.tex
+          root_file: resume_espanol.tex
 
-      - name: Upload PDF
+      - name: Compile English Resume
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: resume_english.tex
+
+      - name: Compile German Resume
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: resume_deutsch.tex
+
+      - name: Upload PDFs
         uses: actions/upload-artifact@v3
         with:
-          name: CV-PDF
-          path: cv.pdf
+          name: Compiled
