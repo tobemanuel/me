@@ -9,6 +9,9 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
+      - name: Install LaTeX
+        run: sudo apt-get update && sudo apt-get install -y texlive-full
+
       - name: Compile Spanish Resume
         uses: xu-cheng/latex-action@v2
         with:
