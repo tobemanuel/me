@@ -1,37 +1,28 @@
-name: Compile LaTeX Resumes
+name: Compile English Resume
 
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - main  # Runs the workflow whenever you push to main
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
       - name: Install LaTeX
-        run: sudo apt-get update && sudo apt-get install -y texlive-full
-
-      - name: Compile Spanish Resume
-        uses: xu-cheng/latex-action@v2
-        with:
-          root_file: resume/resume_espanol.tex
+        run: sudo apt-get install -y texlive-latex-base texlive-latex-extra texlive-fonts-recommended texlive-xetex
 
       - name: Compile English Resume
-        uses: xu-cheng/latex-action@v2
-        with:
-          root_file: resume/resume_english.tex
+        run: |
+          mkdir -p resume/pdf
+          pdflatex -output-directory=resume/pdf resume_english.tex
 
-      - name: Compile German Resume
-        uses: xu-cheng/latex-action@v2
-        with:
-          root_file: resume/resume_deutsch.tex
-
-      - name: Upload PDFs
+      - name: Upload PDF as Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: Compiled-Resumes
-          path: |
-            resume_espanol.pdf
-            resume_english.pdf
-            resume_deutsch.pdf
+          name: compiled-resume
+          path: resume/pdf/resume_english.pdf
