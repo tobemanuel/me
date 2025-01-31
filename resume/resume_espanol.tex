@@ -1,0 +1,314 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\setlength{\multicolsep}{0pt} 
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=1.4cm, top=0.8cm, right=1.2cm, bottom=1cm}
+\usepackage[most]{tcolorbox}
+\tcbset{
+    frame code={}
+    center title,
+    left=0pt,
+    right=0pt,
+    top=0pt,
+    bottom=0pt,
+    colback=gray!20,
+    colframe=white,
+    width=\dimexpr\textwidth\relax,
+    enlarge left by=-2mm,
+    boxsep=4pt,
+    arc=0pt,outer arc=0pt,
+}
+
+\urlstyle{same}
+
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}} 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-2mm}}
+\newcommand{\cvsection}[1]{%
+\vspace{2mm}
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+
+
+
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%
+\newcommand{\name}{Tobías González Vera} % Your Name
+\newcommand{\course}{Wirtschaftsinformatik} % Your Program
+\newcommand{\roll}{xxxxxxxXXXXXXXXXXX} % Your Roll No.
+\newcommand{\emaila}{tobias.egv@gmail.com} %Email 1
+\newcommand{\website}{\href{https://tobiasemanuel.super.site/}{\faGlobe\ tobiasemanuel.super.site}}
+
+\begin{document}
+\fontfamily{cmr}\selectfont
+
+%----------HEADER-----------------
+\noindent
+\begin{minipage}{\textwidth}
+    \raggedright
+    {\Huge \textbf{\name}} \\
+    \vspace{4mm}
+    {\large Estudiante de Ingeniería en Informática Empresarial, enfocado en Business Intelligence, Desarrollo de Sistemas, Gestión de Proyectos y Estrategias de Negocio, apasionado por convertir datos en resultados accionables.} \\
+    \vspace{6pt}
+    \faEnvelope\ \href{mailto:\emaila}{\emaila} \hspace{5mm}
+    \faGlobe\ \href{https://tobiasemanuel.super.site/}{Website} \hspace{5mm}
+    \faGithub\ \href{https://github.com/tobemanuel}{GitHub} \hspace{5mm}
+    \faLinkedin\ \href{https://www.linkedin.com/in/tobemanuel/}{LinkedIn}
+\end{minipage}
+
+\vspace{4mm}
+
+
+
+
+
+
+
+
+%-----------EDUCACION-----------
+\section{\textbf{Educación}}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Ingeniería en Tecnologías de la Información Empresarial (Business Informatics)}{\hfill 2022 - Presente}
+      {Con énfasis en desarrollo y uso de TICs, Liderazgo y Gestión Internacional, Emprendimiento e Innovación.}{}
+      \resumeItemListStart
+        \item {Universidad Paraguayo-Alemana (UPA) \hfill San Lorenzo, Paraguay}
+        \item {SRH Hochschule Heidelberg \hfill Heidelberg, Alemania}
+      \resumeItemListEnd
+
+      Becas: Itaipú (para América) y Erasmus+ (para Europa)
+  \resumeSubHeadingListEnd
+\vspace{-5.5mm}
+
+
+
+
+
+%-----------HABILIDADES-----------------
+\section{\textbf{Habilidades}}
+\resumeSubHeadingListStart
+
+%--- TRES COLUMNAS
+\begin{minipage}[t]{0.33\textwidth}
+  \textbf{Habilidades de TI}
+  \resumeItemListStart
+    \item \textbf{Programación}: OOP, frameworks (escritorio/móvil/web), DevOps, Git
+    \item \textbf{BI \& Datos}: ETL, SQL/NoSQL, Python (pandas, NumPy, ...), Power BI
+    \item \textbf{Aprendizaje Automático}: Desarrollo de LLM, scikit-learn, TensorFlow, MLOps básico
+    \item \textbf{Arquitectura \& Seguridad}: microservicios, ArcGIS/QGIS, Hadoop/Spark, gobernanza de datos
+  \resumeItemListEnd
+\end{minipage}%
+\begin{minipage}[t]{0.33\textwidth}
+  \textbf{Soft Skills}
+  \resumeItemListStart
+    \item \textbf{Liderazgo Efectivo}: alinear equipos multidisciplinarios hacia metas comunes
+    \item \textbf{Comunicación}: presentaciones persuasivas y coordinación con partes interesadas
+    \item \textbf{Resiliencia \& Adaptabilidad}: mantenerse informado de tendencias y ajustar estrategias rápidamente
+    \item \textbf{Resolución Creativa de Problemas}: métodos analíticos para soluciones innovadoras
+  \resumeItemListEnd
+\end{minipage}%
+\begin{minipage}[t]{0.33\textwidth}
+  \textbf{Habilidades de Negocios}
+  \resumeItemListStart
+    \item \textbf{Emprendimiento \& Investigación}: identificación de oportunidades de mercado y marketing estratégico
+    \item \textbf{Logística \& Operaciones}: optimización de flujos de trabajo y mejora continua
+    \item \textbf{Análisis Financiero \& Trading}: presupuestos, evaluación de ROI, análisis fundamental y técnico de mercados
+    \item \textbf{Gestión de Personal \& Cambio}: desarrollo de talento y facilitación de transformaciones organizacionales
+  \resumeItemListEnd
+\end{minipage}
+
+\vspace{-2mm}
+\resumeSubHeadingListEnd
+
+
+
+
+
+
+
+
+
+
+
+%-----------EXPERIENCIA PROFESIONAL-----------------
+\section{\textbf{Experiencia}}
+\resumeSubHeadingListStart
+
+    %--- ANALISTA DE INTELIGENCIA DE NEGOCIOS
+\resumeSubheading
+  {Analista de Inteligencia de Negocios (BI) - Pasantía}{2024}
+  {Chacomer S.A.E. - Líder en retail, distribución y movilidad en Paraguay, con énfasis en la industria automotriz.}{Asunción, Paraguay}
+  \resumeItemListStart
+    \item {Analicé y optimicé procesos para resolver cuellos de botella en las ventas del sector de E-Commerce.}
+    \item {Identifiqué Indicadores Clave de Desempeño (KPIs) para medir y monitorear el rendimiento.}
+    \item {Desarrollé Dashboards para la visualización de datos y la mejora de los procesos de toma de decisiones con Power BI. Gestioné e interpreté datos para proporcionar información accionable que impulsara el negocio.}
+  \resumeItemListEnd
+\vspace{-2mm}
+
+    %--- SOPORTE EN PROYECTOS
+    \resumeSubheading
+      {Soporte en Proyectos}{2022 - Presente}
+      {Proyectos Particulares y Consultorías - Desarrollo estratégico en TI, BI y análisis de datos.}{Asunción, Paraguay}
+      \resumeItemListStart
+        \item {Soporte en consultoría para la implementación de un "Plan Maestro TIC" en el Instituto Paraguayo de Tecnología Agraria (2024)}
+        \item {Soporte en proyecto de seguimiento y análisis de iniciativas de la Agenda Digital para Latinoamérica y El Caribe (2022-2023)}
+        \item {Desarrollo e implementación de sistemas informáticos (2020 - Presente).}
+      \resumeItemListEnd
+    \vspace{-2mm}
+
+
+    %--- ASISTENTE TÉCNICO
+    \resumeSubheading
+      {Asistente Técnico - Tiempo Completo}{2020 - 2022}
+      {EnerPy Ambiental S.A. y EnerPy GmbH - Referente en gestión ambiental y energías renovables.}{Capiatá, Paraguay}
+      \resumeItemListStart
+        \item {Desarrollé y mantuve el sistema informático interno, creando y digitalizando planillas operativas.}
+        \item {Gestioné relaciones con clientes y representé a la empresa en actividades de campo y visitas a otras empresas, tomando decisiones operativas y manejando documentación.}
+        \item {Proporcioné soporte y supervisión en producción, operaciones y logística. Planifiqué actividades de campo y optimicé procesos operativos, reduciendo tiempos de respuesta y mejorando el flujo de trabajo.}
+      \resumeItemListEnd
+    \vspace{-2mm}
+
+
+
+
+
+\resumeSubHeadingListEnd
+
+
+
+
+
+
+
+    
+
+%-----------PROYECTOS RESALTANTES-----------------
+\section{\textbf{Proyectos Resaltantes}}
+\resumeSubHeadingListStart
+
+%--- PROYECTOS
+\resumeItem
+  {Business Intelligence y Reporte Ejecutivo del análisis de ventas retail de Unilever de Paraguay S.A.}{\hfill 2024}
+
+\resumeItem
+  {Mapeo del Parque Guasu Metropolitano de Asunción con QGis}{\hfill 2024}
+
+\resumeItem
+  {Proyecto de Emprendedurismo para el "Shark Tank UPA" - Primer puesto, como CEO y presentador}{\hfill 2023}
+
+\resumeItem
+  {Estudios de Mercado y Plan de Marketing para las empresas Frutika, Nutring y Panzamor}{\hfill 2023 - 2024}
+
+\resumeSubHeadingListEnd
+
+
+\vspace{-3.5mm}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%-----------IDIOMAS-----------------
+\section{\textbf{Idiomas}}
+\begin{minipage}[t]{0.33\textwidth}
+  \textbf{Español}\\
+  \textit{Nivel Nativo (C2)}
+\end{minipage}%
+\begin{minipage}[t]{0.33\textwidth}
+  \textbf{Inglés}\\
+  \textit{Profesional 
+  Avanzado (C1)}
+\end{minipage}%
+\begin{minipage}[t]{0.33\textwidth}
+  \textbf{Alemán}\\
+  \textit{Nivel Intermedio-Alto (B2)}
+\end{minipage}
+
+\vspace{2mm}
+
+
+
+\end{document}
