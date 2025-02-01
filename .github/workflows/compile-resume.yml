@@ -11,16 +11,21 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Show directory structure (debugging)
-        run: ls -R
+        run: ls -la me/resume/resume_scripts
 
-      - name: Install TeXLive
-        run: sudo apt-get install -y texlive texlive-latex-extra texlive-fonts-recommended texlive-latex-recommended
+      - name: Check Available .tex Files
+        run: find me/resume/resume_scripts -name "*.tex"
+
+      - name: Install TeXLive and Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y texlive texlive-latex-extra texlive-fonts-recommended texlive-latex-recommended texlive-xetex texlive-lang-all texlive-science
 
       - name: Compile Resume to PDF
         run: |
-          cd me/resume/resume_scripts || exit 1
-          ls -la
-          pdflatex -interaction=nonstopmode -halt-on-error resume_english.tex
+          cd me/resume/resume_scripts
+          echo "Compiling resume_english.tex"
+          pdflatex -interaction=nonstopmode -halt-on-error resume_english.tex || exit 1
 
       - name: Upload generated PDF
         uses: actions/upload-artifact@v4
