@@ -10,11 +10,8 @@ jobs:
       - name: Clone repository
         uses: actions/checkout@v4
 
-      - name: Show directory structure (debugging)
-        run: ls -la me/resume/resume_scripts
-
-      - name: Check Available .tex Files
-        run: find me/resume/resume_scripts -name "*.tex"
+      - name: Show entire directory structure (debugging)
+        run: ls -R
 
       - name: Install TeXLive and Dependencies
         run: |
@@ -23,12 +20,12 @@ jobs:
 
       - name: Compile Resume to PDF
         run: |
-          cd me/resume/resume_scripts
-          echo "Compiling resume_english.tex"
+          cd resume/resume_scripts
+          ls -la  # Show all files to confirm the .tex file is present
           pdflatex -interaction=nonstopmode -halt-on-error resume_english.tex || exit 1
 
       - name: Upload generated PDF
         uses: actions/upload-artifact@v4
         with:
           name: Resume PDF
-          path: me/resume/resume_scripts/resume_english.pdf
+          path: resume/resume_scripts/resume_english.pdf
