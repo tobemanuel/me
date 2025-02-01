@@ -18,7 +18,8 @@ jobs:
 
       - name: Compile Resume to PDF
         run: |
-          cd me/resume/resume_scripts
+          cd me/resume/resume_scripts || exit 1
+          ls -la
           pdflatex -interaction=nonstopmode -halt-on-error resume_english.tex
 
       - name: Upload generated PDF
