@@ -1,4 +1,4 @@
-name: Compile LaTeX to PDF
+}name: Compile Resume LaTeX to PDF
 
 on: [push, pull_request]
 
@@ -13,12 +13,12 @@ jobs:
       - name: Install TeXLive
         run: sudo apt-get install -y texlive texlive-latex-extra texlive-fonts-recommended texlive-latex-recommended
 
-      - name: Compile TeX to PDF
+      - name: Compile Resume to PDF
         run: |
-          pdflatex -interaction=nonstopmode -halt-on-error -output-directory=output main.tex
+          pdflatex -interaction=nonstopmode -halt-on-error -output-directory=me/resume/resume_scripts me/resume/resume_scripts/resume_english.tex
 
       - name: Upload generated PDF
         uses: actions/upload-artifact@v3
         with:
-          name: PDF
-          path: output/main.pdf
+          name: Resume PDF
+          path: me/resume/resume_scripts/resume_english.pdf
